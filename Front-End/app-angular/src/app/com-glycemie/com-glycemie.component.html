@@ -1,0 +1,19 @@
+<h2>Valeurs glycémiques</h2>
+<table>
+  <thead>
+  <tr>
+    <th>Id Glycémie</th>
+    <th>Date</th>
+    <th>Heures</th>
+    <th>Valeur</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let glycemie of GlycemieListAll">
+    <td>{{ glycemie.id }}</td>
+    <td>{{ glycemie.date }}</td>
+    <td>{{ glycemie.heures }}</td>
+    <td>{{ glycemie.valeur }}</td>
+  </tr>
+  </tbody>
+</table>

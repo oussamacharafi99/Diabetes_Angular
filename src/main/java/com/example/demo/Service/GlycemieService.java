@@ -14,9 +14,8 @@ public class GlycemieService {
 
     @Autowired
     GlycemieRepository glycemieRepository;
-    public List<Glycemie> getGlycemieById(@Param("id") Integer id){
-        id=1;
-        return glycemieRepository.GetAllGycemieByUserId(id);
+    public List<Glycemie> getGlycemieById(){
+        return glycemieRepository.findAll();
     }
 
 }
