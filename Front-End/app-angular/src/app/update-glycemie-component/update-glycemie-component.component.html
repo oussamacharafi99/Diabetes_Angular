@@ -1,0 +1,21 @@
+
+<form [formGroup]="glycemieForm" (ngSubmit)="update()">
+  <div>
+    <label for="valeur">Valeur:</label>
+    <input id="id" formControlName="valeur" type="hidden">
+  </div>
+
+  <div>
+    <label for="valeur">Valeur:</label>
+    <input id="valeur" formControlName="valeur">
+  </div>
+  <div>
+    <label for="heures">Heures:</label>
+    <input id="heures" formControlName="heures" type="time">
+  </div>
+  <div>
+    <label for="date">Date:</label>
+    <input id="date" formControlName="date" type="date">
+  </div>
+  <button type="submit">update Glycémie</button>
+</form>

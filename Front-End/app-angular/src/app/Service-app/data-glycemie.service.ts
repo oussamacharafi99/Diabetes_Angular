@@ -8,6 +8,10 @@ import {Glycemie} from "../Module-app/Glycemie";
 })
 export class DataGlycemieService {
   api: string = "http://localhost:8095/glycemieList";
+  apiAdd: string ="http://localhost:8095/addGlycemie"
+  apiDelet: string =`http://localhost:8095/deleteGlycemie`;
+  apiUpdate: string =`http://localhost:8095/updateGlycemie`;
+  apiFind: string =`http://localhost:8095/Find`;
 
   constructor(private http: HttpClient) {
   }
@@ -16,4 +20,18 @@ export class DataGlycemieService {
     return this.http.get<Array<Glycemie>>(this.api);
   }
 
+  public addGlycemie(glycemie: Glycemie): Observable<Glycemie> {
+    return this.http.post<Glycemie>(this.apiAdd, glycemie);
+  }
+
+  public supprimer(id: number){
+    return this.http.delete(this.apiDelet + "/" + id)
+  }
+  public findGlycemie(id:number){
+    return this.http.get(this.apiFind + "/" + id )
+  }
+
+  public update(id: number , glycemie : Glycemie){
+    return this.http.put(this.apiUpdate + "/" + id, glycemie)
+  }
 }

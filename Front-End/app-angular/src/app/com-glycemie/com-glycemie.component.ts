@@ -14,9 +14,18 @@ export class ComGlycemieComponent implements OnInit {
   constructor(private data: DataGlycemieService ) { }
 
   ngOnInit(): void {
-    this.data.getAllGlycemie().subscribe(value =>
-      this.GlycemieListAll = value
-    )
+    this.getAllGlycemie()
   }
+
+   getAllGlycemie(){
+     this.data.getAllGlycemie().subscribe(value =>
+       this.GlycemieListAll = value
+     )
+   }
+   deleteGlycemie(id: number){
+    this.data.supprimer(id).subscribe(() => {
+      this.getAllGlycemie();
+    });
+   }
 
 }

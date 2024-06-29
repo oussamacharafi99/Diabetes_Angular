@@ -6,6 +6,7 @@
     <th>Date</th>
     <th>Heures</th>
     <th>Valeur</th>
+    <th>Delete</th>
   </tr>
   </thead>
   <tbody>
@@ -14,6 +15,12 @@
     <td>{{ glycemie.date }}</td>
     <td>{{ glycemie.heures }}</td>
     <td>{{ glycemie.valeur }}</td>
+    <td>
+      <a routerLink="/edit/{{ glycemie.id }}">Update</a>
+      <button type="button" (click)="deleteGlycemie(glycemie.id)"  >Delete</button>
+
+    </td>
+
   </tr>
   </tbody>
 </table>
