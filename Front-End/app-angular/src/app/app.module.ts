@@ -8,6 +8,7 @@ import { ComGlycemieComponent } from './com-glycemie/com-glycemie.component';
 import { AddGlycemieComponent } from './add-glycemie/add-glycemie.component';
 import { HeaderComponent } from './header/header.component';
 import { UpdateGlycemieComponentComponent } from './update-glycemie-component/update-glycemie-component.component';
+import { HeroComponent } from "./hero/hero.component";
 
 @NgModule({
   declarations: [
@@ -15,13 +16,14 @@ import { UpdateGlycemieComponentComponent } from './update-glycemie-component/up
     ComGlycemieComponent,
     AddGlycemieComponent,
     HeaderComponent,
-    UpdateGlycemieComponentComponent
+    UpdateGlycemieComponentComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
